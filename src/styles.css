@@ -1,0 +1,274 @@
+/* =========================================================
+   NR Cybersolutions — Unified Theme
+   Drop this whole file in styles.css
+   ========================================================= */
+
+/* ---- Theme colors (tune to your hero photo) ---- */
+:root{
+  --brand-1: #d86df5;         /* magenta/pink from hero */
+  --brand-2: #49d6ff;         /* cyan/blue from hero   */
+  --bg: #0a0f1c;              /* global dark backdrop  */
+  --text: #e8f1ff;            /* default light text    */
+  --surface: rgba(14,20,38,.60);  /* glass panel fill   */
+  --line: rgba(255,255,255,.12);  /* subtle borders     */
+}
+
+/* ---- Global ---- */
+html, body{
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a{ color: color-mix(in srgb, var(--brand-2) 80%, #bfeaff); }
+a:hover{ color: #fff; text-decoration: none; }
+
+/* ---- Header bar (blends with hero) ---- */
+/* Header bar (stays above hero & sections) */
+.site-header{
+  position: sticky;   /* or: position: relative; */
+  top: 0;             /* keeps sticky at top if you want */
+  z-index: 1000;      /* <-- ensures dropdown sits on top */
+
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, var(--brand-1) 16%, transparent),
+      color-mix(in srgb, var(--brand-2) 16%, transparent));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Optional: refine nav links */
+.navbar-dark .nav-link{ color:#d9e7ff; }
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link:focus{ color:#ffffff; }
+
+/* Dark/themed dropdown */
+.navbar .dropdown-menu{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 .75rem 2rem rgba(0,0,0,.45);
+  backdrop-filter: blur(8px);
+  z-index: 1100;     /* extra safety */
+}
+
+/* Dropdown items */
+.navbar .dropdown-item{
+  color: #e9f2ff;
+}
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus{
+  color: #001018;
+  background: color-mix(in srgb, var(--brand-2) 25%, #ffffff 75%);
+}
+
+
+/* ---- Full-bleed hero with overlay matching brand colors ---- */
+.hero{
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(4rem, 6vw, 8rem);
+  margin-inline: 0;
+  /* overlay + image */
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, var(--brand-1) 38%, rgba(7,12,24,.55)),
+      color-mix(in srgb, var(--brand-2) 28%, rgba(7,12,24,.30))),
+    url("assets/images/bg-hero.jpg") center/cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 60px),
+    repeating-linear-gradient(0deg,  rgba(255,255,255,.04) 0 1px, transparent 1px 60px);
+  mix-blend-mode: overlay; opacity:.25;
+}
+
+/* Ensure hero text reads well */
+.hero h1{ color:#fff; }
+.hero .lead{ color:rgba(255,255,255,.88); }
+
+/* ---- Let sections share the background (no solid blocks) ---- */
+main, section{ background: transparent; }
+
+/* ---- Glass cards (Welcome / About Us) ---- */
+.card-pane{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 3rem rgba(0,0,0,.45);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card-pane:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 2rem 3.2rem rgba(0,0,0,.6);
+}
+
+/* ---- Typography ---- */
+h1,h2,h3,h4{
+  font-family: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+.card-pane h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--brand-2);
+}
+.card-pane p,
+.card-pane li{
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e6eaf5;
+}
+
+/* Section spacing */
+main.container{ margin-block: 3rem; }
+
+/* ---- Buttons (synced to palette) ---- */
+.btn-cyan{
+  background: var(--brand-2);
+  color:#001018;
+  border:0;
+  font-weight: 600;
+  padding:.7rem 1.2rem;
+  border-radius:.55rem;
+  transition: background .25s ease, transform .05s ease;
+}
+.btn-cyan:hover{ background: color-mix(in srgb, var(--brand-2) 80%, #009fb7); }
+.btn-cyan:active{ transform: translateY(1px); }
+
+.btn-outline-light{
+  color:#f1f6ff;
+  border-color: rgba(255,255,255,.65);
+  padding:.7rem 1.2rem;
+  border-radius:.55rem;
+}
+.btn-outline-light:hover{
+  color:#001018;
+  background:#f1f6ff;
+  border-color:#f1f6ff;
+}
+
+/* ---- Small utilities ---- */
+.badge-soft{
+  background: rgba(255,255,255,.12);
+  color:#eaf2ff;
+  border:1px solid rgba(255,255,255,.2);
+}
+
+/* A slimmer hero for internal pages like Contact */
+.hero--thin{
+  min-height: 38vh;                     /* thinner than home hero */
+  padding-block: clamp(2.5rem,4vw,5rem);
+  /* reuse the same hero background treatment */
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, var(--brand-1) 38%, rgba(7,12,24,.55)),
+      color-mix(in srgb, var(--brand-2) 28%, rgba(7,12,24,.30))),
+    url("assets/images/hero.jpg") center/cover no-repeat;
+}
+
+/* Keep navbar above content everywhere */
+.site-header{ position: sticky; top: 0; z-index: 1000; }
+
+/* Dark/themed dropdown (global) */
+.navbar .dropdown-menu{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 .75rem 2rem rgba(0,0,0,.45);
+  z-index: 1100;
+}
+.navbar .dropdown-item{ color:#e9f2ff; font-weight:500; padding:.6rem 1rem; }
+.navbar .dropdown-item:hover{ color:#001018; background: color-mix(in srgb, var(--brand-2) 30%, #fff 70%); border-radius:.4rem; }
+
+/* Ensure hero sits below header */
+.hero{ position: relative; z-index: 0; }
+
+/* Topbar Styling */
+.topbar {
+  background: linear-gradient(180deg, rgba(10,15,28,.95), rgba(10,15,28,.85));
+  border-bottom: 1px solid var(--line);
+  color: #cfe0ff;
+  font-size: 0.85rem;
+}
+
+/* Icons and Links */
+.topbar a {
+  color: #cfe0ff;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.topbar a:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+/* Adjust padding for small screens */
+@media (max-width: 768px) {
+  .topbar .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+/* ---------- Thin hero shared by internal pages ---------- */
+.hero--thin{
+  min-height: 38vh;
+  padding-block: clamp(2.5rem,4vw,5rem);
+  display: flex;
+  align-items: center;
+  color:#fff;
+}
+
+/* Service-specific hero images (swap file names as you like) */
+.hero--si{  /* Software Implementation */
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, var(--brand-1) 38%, rgba(7,12,24,.55)),
+      color-mix(in srgb, var(--brand-2) 28%, rgba(7,12,24,.30))),
+    url("assets/images/hero-impl.jpg") center/cover no-repeat;
+}
+.hero--sec{ /* Security Solutions */
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, var(--brand-1) 38%, rgba(7,12,24,.55)),
+      color-mix(in srgb, var(--brand-2) 28%, rgba(7,12,24,.30))),
+    url("assets/images/hero-security.jpg") center/cover no-repeat;
+}
+.hero--qa{  /* QA & Testing */
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, var(--brand-1) 38%, rgba(7,12,24,.55)),
+      color-mix(in srgb, var(--brand-2) 28%, rgba(7,12,24,.30))),
+    url("assets/images/hero-qa.jpg") center/cover no-repeat;
+}
+
+/* Keep header/dropdown consistent everywhere */
+.site-header{ position: sticky; top:0; z-index:1000; }
+.hero{ position: relative; z-index:0; }
+
+.navbar .dropdown-menu{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 .75rem 2rem rgba(0,0,0,.45);
+  z-index: 1100;
+}
+.navbar .dropdown-item{ color:#e9f2ff; font-weight:500; padding:.6rem 1rem; }
+.navbar .dropdown-item:hover{ color:#001018; background: color-mix(in srgb, var(--brand-2) 30%, #fff 70%); border-radius:.4rem; }
+
+/* Optional: small section spacing helper */
+.section{ margin-block: 2.5rem; }

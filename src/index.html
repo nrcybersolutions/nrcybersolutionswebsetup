@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NR Cybersolutions — Cybersecurity & Software Services</title>
+  <meta name="description" content="NR Cybersolutions: software implementation, cybersecurity solutions, and QA testing." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root{
+      /* Bold cyber palette — adjust if you like */
+      --navy:#0b1020; --navy2:#141a30; --ink:#0d1326; --line:#1f2946; --card:#0f1730;
+      --cyan:#00e5ff; --cyan-2:#61f4ff;
+      --btn:#00c2d3; --btnh:#00aab9;
+      --text:#dfe9ff; --muted:#a0afc6;
+    }
+    html,body{ background:#060913; color:var(--text); }
+    a{ color:#7ddfff; } a:hover{ color:#b2f3ff; }
+
+    /* Top icon row */
+    .topbar{ background:var(--navy); color:#eaf6ff; font-size:.92rem; }
+    .topbar a{ color:#eaf6ff; text-decoration:none; }
+    .topbar .bi{ opacity:.9; }
+
+    /* Main nav row */
+    .site-header{ background:linear-gradient(180deg,var(--navy2),var(--ink)); border-bottom:1px solid var(--line); }
+    .navbar-dark .nav-link{ color:#cfe6ff; }
+    .navbar-dark .nav-link:hover, .navbar-dark .nav-link:focus{ color:#fff; }
+    .dropdown-menu{ background:var(--card); border:1px solid var(--line); box-shadow:0 1rem 2rem rgba(0,0,0,.5); }
+    .dropdown-item{ color:#cfe6ff; } .dropdown-item:hover{ background:var(--cyan); color:#001018; }
+    .social-icon{ color:#cfe6ff; } .social-icon:hover{ color:#fff; }
+
+    /* Hero & sections */
+    .hero{
+      background:
+        radial-gradient(1200px 500px at -10% -20%, #0b173a 20%, transparent 60%),
+        radial-gradient(1200px 500px at 110% -10%, #0b173a 20%, transparent 60%),
+        linear-gradient(135deg, #0f1b3f 0%, #0a1633 40%, #071023 100%);
+      color:#fff; position:relative; overflow:hidden;
+    }
+    .hero::after{
+      content:""; position:absolute; inset:0; pointer-events:none;
+      background:
+        repeating-linear-gradient(90deg, rgba(0,229,255,.08) 0 1px, transparent 1px 60px),
+        repeating-linear-gradient(0deg, rgba(0,229,255,.06) 0 1px, transparent 1px 60px);
+      mix-blend-mode:screen;
+    }
+    .badge-soft{ background:rgba(0,229,255,.12); color:var(--cyan); border:1px solid rgba(0,229,255,.25); }
+    .card-pane{ background:var(--card); border:1px solid var(--line); border-radius:.8rem; box-shadow:0 .75rem 2rem rgba(0,0,0,.35); }
+
+    /* Buttons */
+    .btn-cyan{ background:var(--btn); color:#001018; border:0; }
+    .btn-cyan:hover{ background:var(--btnh); color:#001018; }
+
+    /* Footer */
+    footer{ background:#0a1124; border-top:1px solid var(--line); }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP ICON ROW -->
+  <div class="topbar py-2">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div class="d-flex flex-wrap gap-3 align-items-center">
+        <span><i class="bi bi-geo-alt-fill me-1"></i>Vancouver, BC</span>
+        <a href="mailto:contact@nrcybersolutions.ca"><i class="bi bi-envelope-fill me-1"></i>contact@nrcybersolutions.ca</a>
+        <span><i class="bi bi-telephone-fill me-1"></i>+1 (236) 818-8470</span>
+      </div>
+      <div class="d-flex gap-3">
+        <a class="social-icon" aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
+        <a class="social-icon" aria-label="WhatsApp" href="https://wa.me/00000000000" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+        <a class="social-icon" aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
+        <a class="social-icon" aria-label="X" href="#"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAV ROW -->
+  <div class="site-header py-2">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Logo/brand on left -->
+        <a class="navbar-brand fw-semibold" href="index.html">
+          <i class="bi bi-shield-lock me-1"></i> NR Cybersolutions
+        </a>
+
+        <!-- Mobile toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu on the right -->
+        <div class="collapse navbar-collapse" id="mainnav">
+          <ul class="navbar-nav ms-auto">
+            <!-- <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li> --> 
+
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- If you want one-page only, change these hrefs to #software-implementation, #security-solutions, #qa-testing -->
+                <li><a class="dropdown-item" href="software-implementation.html">Software Implementation</a></li>
+                <li><a class="dropdown-item" href="security-solutions.html">Security Solutions</a></li>
+                <li><a class="dropdown-item" href="qa-testing.html">QA &amp; Testing</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero py-5">
+    <div class="container py-3">
+      <span class="badge badge-soft mb-2">Trusted • Secure • Built to Ship</span>
+      <h1 class="display-5 fw-bold">Cyber & Software Expertise that Delivers</h1>
+      <p class="lead mb-4 text-white-50">
+        Practical services across implementation, security, and quality—focused on results, not buzzwords.
+      </p>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-cyan btn-lg" href="security-solutions.html"><i class="bi bi-shield-check me-2"></i>Explore Security</a>
+        <a class="btn btn-outline-light btn-lg" href="software-implementation.html"><i class="bi bi-braces-asterisk me-2"></i>Implementation</a>
+        <a class="btn btn-outline-light btn-lg" href="qa-testing.html"><i class="bi bi-robot me-2"></i>QA & Testing</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME + ABOUT PREVIEW -->
+  <main class="container my-5">
+    <div class="row g-4">
+      <!-- Home blurb -->
+      <div class="col-lg-6">
+        <div class="card-pane p-4 h-100">
+          <h2 class="h4 mb-3">Welcome to NR Cybersolutions</h2>
+          <p class="mb-3">
+            We help small and mid-size teams reduce risk and deliver software faster. Our approach combines
+            hands-on engineering with outcome-driven cybersecurity.
+          </p>
+          <ul class="mb-4">
+            <li>Software Implementation — apps, APIs, data, DevOps</li>
+            <li>Security Solutions — SOC, detection, cloud, IR, testing</li>
+            <li>QA & Testing — automation, performance, release readiness</li>
+          </ul>
+          <a class="btn btn-cyan" href="contact.html"><i class="bi bi-send me-1"></i> Contact Us</a>
+        </div>
+      </div>
+
+      <!-- About teaser -->
+      <div class="col-lg-6" id="about">
+        <div class="card-pane p-4 h-100">
+          <h2 class="h4 mb-3">About Us</h2>
+          <p>
+            Based in Vancouver, BC, NR Cybersolutions partners with clients across industries to build secure,
+            maintainable systems. We favor lightweight processes, clear KPIs, and transparent reporting.
+          </p>
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 h-100 border-secondary">
+                <h6 class="fw-semibold"><i class="bi bi-people me-2"></i>Practical Expertise</h6>
+                <p class="small mb-0">We ship pragmatic solutions mapped to your goals.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 h-100 border-secondary">
+                <h6 class="fw-semibold"><i class="bi bi-speedometer2 me-2"></i>Faster to Value</h6>
+                <p class="small mb-0">Start small, improve continuously, and scale safely.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-light" href="contact.html"><i class="bi bi-calendar-event me-1"></i> Book a Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div class="small text-muted">© 2025 NR Cybersolutions</div>
+      <div class="small"><a class="text-decoration-none" href="privacy.html">Privacy Policy</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Optional: open Services dropdown on hover for desktops -->
+  <script>
+    (() => {
+      const mq = window.matchMedia('(min-width: 992px)');
+      document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+        const toggle = item.querySelector('[data-bs-toggle="dropdown"]');
+        if (!toggle) return;
+        let timer;
+        item.addEventListener('mouseenter', () => { if (mq.matches) { clearTimeout(timer); new bootstrap.Dropdown(toggle).show(); }});
+        item.addEventListener('mouseleave', () => { if (mq.matches) { timer = setTimeout(() => new bootstrap.Dropdown(toggle).hide(), 120); }});
+      });
+    })();
+  </script>
+</body>
+</html>
