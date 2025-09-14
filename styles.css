@@ -359,3 +359,18 @@ main.container{ margin-block: 3rem; }
   .flow::before { display: none; } /* hide long line on small screens */
 }
 
+.timeline {
+  list-style: none;
+  padding-left: 0;
+}
+.timeline li {
+  background: var(--card);
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-left: 4px solid var(--cyan);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.timeline li strong {
+  color: var(--cyan);
+}
