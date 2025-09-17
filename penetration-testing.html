@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Penetration Testing — NR Cybersolutions</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Favicon + Theme -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- SEO -->
+  <meta name="description" content="Client-ready penetration testing for web, mobile, APIs, cloud, and infrastructure. Risk-ranked findings, executive summary, technical tickets, and retesting included." />
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar small py-1">
+  <div class="container d-flex justify-content-between align-items-center gap-3">
+    <div class="d-flex align-items-center gap-3">
+      <span><i class="bi bi-geo-alt-fill me-1"></i> Vancouver, BC</span>
+      <span><i class="bi bi-envelope-fill me-1"></i> nrcybersolutions.contact@gmail.com</span>
+      <span><i class="bi bi-telephone-fill me-1"></i> +1 (236) 818-8470</span>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <a class="text-decoration-none" href="#"><i class="bi bi-facebook"></i></a>
+      <a class="text-decoration-none" href="#"><i class="bi bi-whatsapp"></i></a>
+      <a class="text-decoration-none" href="#"><i class="bi bi-instagram"></i></a>
+      <a class="text-decoration-none" href="#"><i class="bi bi-twitter-x"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="site-header py-2">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand fw-semibold" href="index.html">
+        <i class="bi bi-shield-lock me-1"></i> NR Cybersolutions
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainnav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="software-implementation.html">Software Implementation</a></li>
+              <li><a class="dropdown-item" href="security-solutions.html">Security Solutions</a></li>
+              <li><a class="dropdown-item" href="qa-testing.html">QA & Testing</a></li>
+              <li><a class="dropdown-item active" href="penetration-testing.html">Penetration Testing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero hero--thin hero--pt">
+  <div class="container">
+    <h1 class="display-6 fw-bold mb-2">Penetration Testing</h1>
+    <p class="lead mb-0">Web, mobile, API, cloud, and infrastructure testing — risk-ranked findings and retesting included.</p>
+  </div>
+</header>
+
+<main class="container my-5">
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="card-pane">
+      <p class="mb-0">
+        Industry-aligned testing using OWASP, MASTG/MASVS, and standard network PT workflows.
+        You get an executive summary for leaders, reproducible technical findings for engineers,
+        and a <strong>complimentary retest</strong> to verify fixes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Service Tiles -->
+  <section class="section">
+    <h2 class="h4 mb-3">What We Test</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2"><i class="bi bi-globe2 me-2"></i>Web Applications</h3>
+          <ul class="mb-0">
+            <li>OWASP-aligned coverage for auth, access control, input handling, and business logic.</li>
+            <li>Manual + assisted testing (Burp/ZAP) for XSS, SQLi, CSRF, SSRF, IDOR.</li>
+            <li>Output: prioritized fixes and quick wins.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2"><i class="bi bi-phone me-2"></i>Mobile (iOS / Android)</h3>
+          <ul class="mb-0">
+            <li>MASTG/MASVS-aligned static & dynamic testing (storage, crypto, cert pinning).</li>
+            <li>API traffic review, deeplinks/intents, build/signing hygiene.</li>
+            <li>Output: store-readiness issues and remediation guidance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2"><i class="bi bi-braces-asterisk me-2"></i>APIs (REST / GraphQL)</h3>
+          <ul class="mb-0">
+            <li>Spec + live discovery, authn/authz (BOLA/IDOR), rate limits, schema validation.</li>
+            <li>Endpoint-level findings with example requests.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2"><i class="bi bi-diagram-3 me-2"></i>Infrastructure & Active Directory</h3>
+          <ul class="mb-0">
+            <li>External & internal PT, exposed services review (RDP/SMB/SSH/DB).</li>
+            <li>AD misconfig paths (Kerberoasting, delegation, stale objects).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2"><i class="bi bi-cloud-check me-2"></i>Cloud Configuration Review</h3>
+          <ul class="mb-0">
+            <li>IAM, segmentation, storage exposure, keys/secrets, logging & monitoring.</li>
+            <li>Benchmarks: CIS + platform best practices; optional IaC/Terraform review.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2"><i class="bi bi-hdd-network me-2"></i>Network Devices</h3>
+          <ul class="mb-0">
+            <li>Switch/router/firewall configs vs CIS (AAA, SNMP, logging, ACLs, mgmt plane).</li>
+            <li>Secure defaults and hardening plan.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2"><i class="bi bi-window me-2"></i>Thick Client / Desktop</h3>
+          <ul class="mb-0">
+            <li>Binary abuse paths, local storage, update channels, DLL hijacking, IPC/COM.</li>
+            <li>Output: exploitation prerequisites and mitigation steps.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Engagement Styles -->
+  <section class="section">
+    <div class="row g-4">
+      <div class="col-md-4 d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">Black Box</h3>
+          <p class="mb-0">No credentials; closest to an unknown external attacker.</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">Grey Box</h3>
+          <p class="mb-0">Limited context/standard test accounts; <strong>best value</strong> for time.</p>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">White Box</h3>
+          <p class="mb-0">Full design/code/config access; <strong>deep coverage</strong> and faster root-cause.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="section">
+    <div class="card-pane">
+      <h2 class="h4 mb-3">How We Work</h2>
+      <ol class="mb-0">
+        <li><strong>Scope & Rules of Engagement</strong> — targets, windows, out-of-scope, safety.</li>
+        <li><strong>Kickoff</strong> — accounts, API specs, VPN/access, comms channel.</li>
+        <li><strong>Testing</strong> — manual + assisted techniques; evidence captured.</li>
+        <li><strong>Readout</strong> — exec summary + technical walkthrough with owners.</li>
+        <li><strong>Retest Included</strong> — verify fixes and update the report version.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Deliverables -->
+  <section class="section">
+    <div class="card-pane">
+      <h2 class="h4 mb-3">What You Get</h2>
+      <ul class="mb-0">
+        <li><strong>Risk-ranked report</strong> (likelihood × impact), reproducible PoCs, screenshots.</li>
+        <li><strong>Executive summary</strong> + <strong>technical ticket text</strong> for Jira/ServiceNow.</li>
+        <li><strong>Remediation workshop</strong> (1–2 hours) and <strong>one retest within 60 days</strong>.</li>
+        <li><strong>Compliance mapping</strong> where needed (SOC 2, ISO 27001, PCI, OSFI).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="section">
+    <h2 class="h4 mb-3">Packages</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">Essentials (Fixed-Fee)</h3>
+          <ul class="mb-0">
+            <li>1 web app or small API</li>
+            <li>3–5 test days</li>
+            <li>Retest included</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">Standard</h3>
+          <ul class="mb-0">
+            <li>Multi-app or app+API</li>
+            <li>Light infra add-on</li>
+            <li>7–10 test days</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">Advanced / Red-Team-Lite</h3>
+          <ul class="mb-0">
+            <li>Grey-box plus cloud/AD attack-path validation</li>
+            <li>Custom scope</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTAs -->
+  <div class="d-flex flex-wrap gap-2">
+    <a class="btn btn-cyan" href="contact.html?subject=Penetration%20Testing%20Scope">
+      <i class="bi bi-clipboard-check"></i> Scope my test
+    </a>
+    <a class="btn btn-outline-light" href="assets/sample-pt-report.pdf" target="_blank">
+      <i class="bi bi-file-earmark-text"></i> See a sample report
+    </a>
+    <a class="btn btn-outline-light" href="software-implementation.html">
+      <i class="bi bi-braces"></i> Add PT to my project
+    </a>
+  </div>
+
+</main>
+
+<footer class="py-4">
+  <div class="container d-flex justify-content-between">
+    <div class="small text-muted">© 2025 NR Cybersolutions</div>
+    <a class="small text-decoration-none" href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
