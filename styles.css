@@ -281,3 +281,17 @@ main.container{ margin-block: 3rem; }
       color-mix(in srgb, var(--brand-2) 28%, rgba(7,12,24,.30))),
     url("assets/images/hero-pt.jpg") center/cover no-repeat;
 }
+
+/* Collapsible tile header */
+.tile-toggle{
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  width: 100%;
+}
+.tile-toggle:hover{ background: rgba(255,255,255,.04); }
+.card-pane .collapse{ border-top: 1px solid var(--line); }
+
+/* Rotate chevron when open */
+.tile-toggle .chevron{ transition: transform .2s ease; }
+.tile-toggle[aria-expanded="true"] .chevron{ transform: rotate(180deg); }

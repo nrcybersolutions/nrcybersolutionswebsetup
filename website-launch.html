@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Website & Digital Launch — NR Cybersolutions</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Favicon + Theme -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- SEO -->
+  <meta name="description" content="Full-service website creation and digital launch. We handle domain, hosting, design, content, email setup, analytics, SEO, and launch marketing." />
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar small py-1">
+  <div class="container d-flex justify-content-between align-items-center gap-3">
+    <div class="d-flex align-items-center gap-3">
+      <span><i class="bi bi-geo-alt-fill me-1"></i> Vancouver, BC</span>
+      <span><i class="bi bi-envelope-fill me-1"></i> nrcybersolutions.contact@gmail.com</span>
+      <span><i class="bi bi-telephone-fill me-1"></i> +1 (236) 818-8470</span>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <a class="text-decoration-none" href="#"><i class="bi bi-facebook"></i></a>
+      <a class="text-decoration-none" href="#"><i class="bi bi-whatsapp"></i></a>
+      <a class="text-decoration-none" href="#"><i class="bi bi-instagram"></i></a>
+      <a class="text-decoration-none" href="#"><i class="bi bi-twitter-x"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="site-header py-2">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand fw-semibold" href="index.html">
+        <i class="bi bi-shield-lock me-1"></i> NR Cybersolutions
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainnav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item active" href="website-launch.html">Website & Digital Launch</a></li>
+              <li><a class="dropdown-item" href="software-implementation.html">Software Implementation</a></li>
+              <li><a class="dropdown-item" href="security-solutions.html">Security Solutions</a></li>
+              <li><a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a></li>
+              <li><a class="dropdown-item" href="qa-testing.html">QA & Testing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO (reusing Software Implementation hero style so no CSS change needed) -->
+<header class="hero hero--thin hero--si">
+  <div class="container">
+    <h1 class="display-6 fw-bold mb-2">Website & Digital Launch</h1>
+    <p class="lead mb-0">You bring the business name. We ship everything else — domain, hosting, design, email, and launch marketing.</p>
+  </div>
+</header>
+
+<main class="container my-5">
+
+  <!-- Intro / Value prop -->
+  <section class="section">
+    <div class="card-pane">
+      <p class="mb-0">
+        End-to-end website creation for busy teams. We handle domain & DNS, secure hosting, modern design,
+        content and forms, professional email (Microsoft 365 / Google Workspace), analytics & SEO basics,
+        privacy templates, and a simple launch plan — all in one place.
+      </p>
+    </div>
+  </section>
+
+<!-- What's Included (collapsible tiles) -->
+<section class="section">
+  <h2 class="h4 mb-3">What’s Included</h2>
+
+  <!-- If you want only one open at a time, wrap tiles in an element with an ID (e.g. included-accordion)
+       and add data-bs-parent="#included-accordion" to each .collapse below. -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="included-accordion">
+
+    <!-- Domain & DNS -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-domain" aria-expanded="false" aria-controls="inc-domain">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-link-45deg me-2"></i>
+            <span class="fw-semibold">Domain & DNS</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-domain" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>Name search, registration/transfer</li>
+              <li>DNS setup + SPF/DKIM/DMARC</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hosting & Security -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-hosting" aria-expanded="false" aria-controls="inc-hosting">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-shield-lock-fill me-2"></i>
+            <span class="fw-semibold">Hosting & Security</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-hosting" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>Managed hosting, SSL, CDN</li>
+              <li>Daily backups & uptime monitoring</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design & Build -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-design" aria-expanded="false" aria-controls="inc-design">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-layout-text-sidebar-reverse me-2"></i>
+            <span class="fw-semibold">Design & Build</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-design" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>Modern, mobile-first site (WordPress or Next.js)</li>
+              <li>Accessibility & performance pass</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content & Assets -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-content" aria-expanded="false" aria-controls="inc-content">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-image me-2"></i>
+            <span class="fw-semibold">Content & Assets</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-content" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>Home + up to 5 pages (About, Services, Contact…)</li>
+              <li>Copy polish & quality stock imagery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact & Bookings -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-contact" aria-expanded="false" aria-controls="inc-contact">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-chat-dots me-2"></i>
+            <span class="fw-semibold">Contact & Bookings</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-contact" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>Spam-protected forms, map, WhatsApp</li>
+              <li>Calendly / bookings embed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email & Productivity -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-email" aria-expanded="false" aria-controls="inc-email">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-envelope-at me-2"></i>
+            <span class="fw-semibold">Email & Productivity</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-email" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>Microsoft 365 or Google Workspace</li>
+              <li>Mailboxes, aliases, shared drives</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analytics & SEO -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-analytics" aria-expanded="false" aria-controls="inc-analytics">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-graph-up-arrow me-2"></i>
+            <span class="fw-semibold">Analytics & SEO</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-analytics" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>GA4 + Search Console + sitemap</li>
+              <li>On-page SEO & robots.txt</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compliance & Trust -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-compliance" aria-expanded="false" aria-controls="inc-compliance">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-check2-shield me-2"></i>
+            <span class="fw-semibold">Compliance & Trust</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-compliance" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>Cookie banner (where needed)</li>
+              <li>Privacy page & CASL-aware forms (Canada)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Launch Marketing -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100 p-0">
+        <button class="tile-toggle w-100 text-start p-3 d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse" data-bs-target="#inc-launch" aria-expanded="false" aria-controls="inc-launch">
+          <span class="d-flex align-items-center">
+            <i class="bi bi-rocket-takeoff me-2"></i>
+            <span class="fw-semibold">Launch Marketing</span>
+          </span>
+          <i class="bi bi-chevron-down chevron"></i>
+        </button>
+        <div id="inc-launch" class="collapse" data-bs-parent="#included-accordion">
+          <div class="px-3 pb-3 pt-0">
+            <ul class="mb-0">
+              <li>Google Business Profile setup</li>
+              <li>Social Open-Graph images & launch post template</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Outcomes -->
+  <section class="section">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-12 col-lg-6 d-flex">
+        <div class="card-pane h-100 w-100">
+          <h2 class="h5 mb-2">Outcomes</h2>
+          <ul class="mb-0">
+            <li>Professional, mobile-first website that loads fast</li>
+            <li>Security handled: SSL, backups, monitoring, email auth</li>
+            <li>Findability: Google indexing & clean metadata</li>
+            <li>Less admin: email, calendar, and shared drives ready</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 d-flex">
+        <div class="card-pane h-100 w-100">
+          <h2 class="h5 mb-2">What We Need From You</h2>
+          <ul class="mb-0">
+            <li>Business name & short description</li>
+            <li>Logo/brand (if any), services, contact details</li>
+            <li>Any must-have images or examples you like</li>
+            <li>One decision-maker for quick approvals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How we work -->
+  <section class="section">
+    <div class="card-pane">
+      <h2 class="h4 mb-3">How We Work</h2>
+      <ol class="mb-0">
+        <li><strong>Kickoff (30–45 mins):</strong> goals, pages, brand notes, examples.</li>
+        <li><strong>Name & hosting:</strong> register/transfer domain, DNS, SSL, CDN, backups.</li>
+        <li><strong>Design direction:</strong> moodboard + wireframes (homepage first).</li>
+        <li><strong>Build & content:</strong> pages, forms, CTAs; copy polish; imagery.</li>
+        <li><strong>Review & edits:</strong> 1–2 rounds; accessibility & performance pass.</li>
+        <li><strong>Go-live:</strong> DNS switch, Google index request, Business Profile, launch post.</li>
+        <li><strong>Handover:</strong> admin access + short video walkthrough.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="section">
+    <h2 class="h4 mb-3">Packages</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">Starter</h3>
+          <ul class="mb-0">
+            <li>1–5 pages (Home, About, Services, Contact, +1)</li>
+            <li>Domain + DNS hardening (SPF/DKIM/DMARC)</li>
+            <li>Managed hosting, SSL, CDN, backups</li>
+            <li>1 mailbox (M365 or Google Workspace)</li>
+            <li><em>Timeline:</em> ~2 weeks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">Business</h3>
+          <ul class="mb-0">
+            <li>Up to 10 pages + blog/news</li>
+            <li>3 mailboxes + shared drive</li>
+            <li>Bookings/Calendly or WhatsApp integration</li>
+            <li>Local SEO schema + launch assets</li>
+            <li><em>Timeline:</em> ~3–4 weeks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card-pane h-100 w-100">
+          <h3 class="h5 mb-2">Pro / E-commerce</h3>
+          <ul class="mb-0">
+            <li>Shopify / WooCommerce / Stripe</li>
+            <li>Up to 25 products + templates</li>
+            <li>Collections SEO and review widget</li>
+            <li>Advanced analytics & schema</li>
+            <li><em>Timeline:</em> ~4–6 weeks</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tech & Care plan -->
+  <section class="section">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-12 col-lg-6 d-flex">
+        <div class="card-pane h-100 w-100">
+          <h2 class="h5 mb-2">Tech Options</h2>
+          <ul class="mb-0">
+            <li><strong>CMS:</strong> WordPress (editor + plugins) or Next.js with headless CMS</li>
+            <li><strong>Hosting:</strong> Managed WP, Vercel/Netlify + Cloudflare CDN</li>
+            <li><strong>Email:</strong> Microsoft 365 or Google Workspace</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 d-flex">
+        <div class="card-pane h-100 w-100">
+          <h2 class="h5 mb-2">Care Plan (optional)</h2>
+          <ul class="mb-0">
+            <li>Monthly updates & security patches</li>
+            <li>Uptime & daily backups</li>
+            <li>1–2 small content edits / month</li>
+            <li>Quarterly stats snapshot & priority support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section">
+    <div class="card-pane">
+      <h2 class="h4 mb-3">FAQs</h2>
+      <ul class="mb-0">
+        <li><strong>Can you use my existing domain?</strong> Yes — we’ll transfer or repoint DNS safely.</li>
+        <li><strong>Will I be able to edit pages?</strong> Yes — we provide editor access + a short video.</li>
+        <li><strong>Do you handle email migration?</strong> Yes — we migrate and set up clients.</li>
+        <li><strong>Do you support Canadian privacy & email rules?</strong> Yes — PIPEDA/CASL-aware templates and consent.</li>
+        <li><strong>Do you lock me in?</strong> No — you own the domain, hosting, and CMS/code access.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTAs -->
+  <section class="section">
+    <div class="d-flex flex-wrap gap-2">
+      <a class="btn btn-cyan" href="contact.html?subject=Website%20%26%20Digital%20Launch%20Consultation">
+        <i class="bi bi-calendar2-check"></i> Book a website consult
+      </a>
+      <a class="btn btn-outline-light" href="contact.html?subject=Fixed-Fee%20Website%20Quote">
+        <i class="bi bi-currency-dollar"></i> Get a fixed-fee quote
+      </a>
+      <a class="btn btn-outline-light" href="contact.html?subject=Ecommerce%20Enquiry">
+        <i class="bi bi-bag-check"></i> Ask about e-commerce
+      </a>
+    </div>
+    <p class="small text-muted mt-2 mb-0">Free 15-min call. We’ll map your pages and timeline.</p>
+  </section>
+
+</main>
+
+<footer class="py-4">
+  <div class="container d-flex justify-content-between">
+    <div class="small text-muted">© 2025 NR Cybersolutions</div>
+    <a class="small text-decoration-none" href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
