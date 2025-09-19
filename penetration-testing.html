@@ -85,92 +85,125 @@
     </div>
   </section>
 
-  <!-- What We Test -->
-  <section class="section">
-    <h2 class="h4 mb-3">What We Test</h2>
+<!-- WHAT WE TEST (3×2 collapsible tiles) -->
+<section class="section">
+  <h2 class="h4 mb-3">What We Test</h2>
 
-    <!-- FIX: proper row wrapper and explicit column sizes -->
-    <div class="row g-4">
-      <!-- 1 -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card-pane h-100 w-100">
-          <h3 class="h5 mb-2"><i class="bi bi-globe2 me-2"></i>Web Applications</h3>
-          <ul class="mb-0">
+  <div id="pt-tiles" class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+    <!-- Web Applications -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ptWeb"
+                aria-expanded="false" aria-controls="ptWeb">
+          <span><i class="bi bi-globe2 me-2"></i>Web Applications</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="ptWeb" class="tile-body collapse" data-bs-parent="#pt-tiles">
+          <ul class="mb-0 small">
             <li>OWASP-aligned coverage for auth, access control, input handling, and business logic.</li>
             <li>Manual + assisted testing (Burp/ZAP) for XSS, SQLi, CSRF, SSRF, IDOR.</li>
             <li>Output: prioritized fixes and quick wins.</li>
           </ul>
         </div>
       </div>
+    </div>
 
-      <!-- 2 -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card-pane h-100 w-100">
-          <h3 class="h5 mb-2"><i class="bi bi-phone me-2"></i>Mobile (iOS / Android)</h3>
-          <ul class="mb-0">
+    <!-- Mobile -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ptMobile"
+                aria-expanded="false" aria-controls="ptMobile">
+          <span><i class="bi bi-phone me-2"></i>Mobile (iOS / Android)</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="ptMobile" class="tile-body collapse" data-bs-parent="#pt-tiles">
+          <ul class="mb-0 small">
             <li>MASTG/MASVS-aligned static & dynamic testing (storage, crypto, cert pinning).</li>
             <li>API traffic review, deeplinks/intents, build/signing hygiene.</li>
             <li>Output: store-readiness issues and remediation guidance.</li>
           </ul>
         </div>
       </div>
+    </div>
 
-      <!-- 3 -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card-pane h-100 w-100">
-          <h3 class="h5 mb-2"><i class="bi bi-braces-asterisk me-2"></i>APIs (REST / GraphQL)</h3>
-          <ul class="mb-0">
+    <!-- APIs -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ptApis"
+                aria-expanded="false" aria-controls="ptApis">
+          <span><i class="bi bi-braces-asterisk me-2"></i>APIs (REST / GraphQL)</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="ptApis" class="tile-body collapse" data-bs-parent="#pt-tiles">
+          <ul class="mb-0 small">
             <li>Spec + live discovery, authn/authz (BOLA/IDOR), rate limits, schema validation.</li>
             <li>Endpoint-level findings with example requests.</li>
           </ul>
         </div>
       </div>
+    </div>
 
-      <!-- 4 -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card-pane h-100 w-100">
-          <h3 class="h5 mb-2"><i class="bi bi-diagram-3 me-2"></i>Infrastructure & Active Directory</h3>
-          <ul class="mb-0">
+    <!-- Infrastructure & AD (includes Thick Client) -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ptInfra"
+                aria-expanded="false" aria-controls="ptInfra">
+          <span><i class="bi bi-diagram-3 me-2"></i>Infrastructure & Active Directory</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="ptInfra" class="tile-body collapse" data-bs-parent="#pt-tiles">
+          <ul class="mb-0 small">
             <li>External & internal PT, exposed services review (RDP/SMB/SSH/DB).</li>
             <li>AD misconfig paths (Kerberoasting, delegation, stale objects).</li>
+            <li><strong>Thick Client / Desktop:</strong> binary abuse paths, local storage, update channels, DLL hijacking, IPC/COM.</li>
           </ul>
         </div>
       </div>
+    </div>
 
-      <!-- 5 -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card-pane h-100 w-100">
-          <h3 class="h5 mb-2"><i class="bi bi-cloud-check me-2"></i>Cloud Configuration Review</h3>
-          <ul class="mb-0">
+    <!-- Cloud Configuration Review -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ptCloud"
+                aria-expanded="false" aria-controls="ptCloud">
+          <span><i class="bi bi-cloud-check me-2"></i>Cloud Configuration Review</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="ptCloud" class="tile-body collapse" data-bs-parent="#pt-tiles">
+          <ul class="mb-0 small">
             <li>IAM, segmentation, storage exposure, keys/secrets, logging & monitoring.</li>
             <li>Benchmarks: CIS + platform best practices; optional IaC/Terraform review.</li>
           </ul>
         </div>
       </div>
+    </div>
 
-      <!-- 6 -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex">
-        <div class="card-pane h-100 w-100">
-          <h3 class="h5 mb-2"><i class="bi bi-hdd-network me-2"></i>Network Devices</h3>
-          <ul class="mb-0">
+    <!-- Network Devices -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#ptNetwork"
+                aria-expanded="false" aria-controls="ptNetwork">
+          <span><i class="bi bi-hdd-network me-2"></i>Network Devices</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="ptNetwork" class="tile-body collapse" data-bs-parent="#pt-tiles">
+          <ul class="mb-0 small">
             <li>Switch/router/firewall configs vs CIS (AAA, SNMP, logging, ACLs, mgmt plane).</li>
             <li>Secure defaults and hardening plan.</li>
           </ul>
         </div>
       </div>
-
-      <!-- 7 = Thick Client / Desktop (centered wide on lg) -->
-      <div class="col-12 col-lg-8 offset-lg-2 d-flex">
-        <div class="card-pane h-100 w-100">
-          <h3 class="h5 mb-2"><i class="bi bi-window me-2"></i>Thick Client / Desktop</h3>
-          <ul class="mb-0">
-            <li>Binary abuse paths, local storage, update channels, DLL hijacking, IPC/COM.</li>
-            <li>Output: exploitation prerequisites and mitigation steps.</li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- Engagement Styles -->
   <section class="section">
