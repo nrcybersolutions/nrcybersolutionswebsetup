@@ -367,3 +367,12 @@ main.container{ margin-block: 3rem; }
 
 /* divider for the body when open */
 .card-pane .collapse{ border-top: 1px solid var(--line); }
+
+/* Service-specific hero image for Software Delivery */
+.hero--sd{
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, var(--brand-1) 38%, rgba(7,12,24,.55)),
+      color-mix(in srgb, var(--brand-2) 28%, rgba(7,12,24,.30))),
+    url("assets/images/hero-delivery.jpg") center/cover no-repeat;
+}
