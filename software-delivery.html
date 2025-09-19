@@ -102,70 +102,209 @@
     </div>
   </div>
 
-  <!-- SDLC Grid -->
-  <section class="section">
-    <h2 class="h4 mb-3">SDLC — End-to-End</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+<!-- SDLC — End-to-End (accordion tiles) -->
+<section class="section">
+  <h2 class="h4 mb-3">SDLC — End-to-End</h2>
 
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-flag me-2"></i>Plan & Discovery</h3>
-        <ul class="mb-0"><li>Stakeholder goals, KPIs, scope, and roadmap.</li><li>Backlog shaping, estimates, milestones.</li></ul>
-      </div></div>
+  <div id="sdlc-tiles" class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
 
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-easel2 me-2"></i>Design & UX</h3>
-        <ul class="mb-0"><li>Wireframes, design system, accessibility checks.</li><li>Prototypes & quick usability feedback.</li></ul>
-      </div></div>
-
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-code-slash me-2"></i>Build (Web / Mobile / Services)</h3>
-        <ul class="mb-0"><li>React/Next.js/Vue; .NET/Node/Python; mobile options.</li><li>Code reviews, modular design, secure coding.</li></ul>
-      </div></div>
-
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-braces-asterisk me-2"></i>APIs & Integrations</h3>
-        <ul class="mb-0"><li>REST/GraphQL design, versioning, authN/authZ.</li><li>SaaS, payments, identity, messaging.</li></ul>
-      </div></div>
-
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-diagram-3 me-2"></i>Data & Pipelines</h3>
-        <ul class="mb-0"><li>Relational stores, cache, ETL/data jobs.</li><li>Migrations, data quality, retention & privacy.</li></ul>
-      </div></div>
-
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-cloud-check me-2"></i>DevOps & Cloud</h3>
-        <ul class="mb-0"><li>IaC (Terraform), environments, secrets, containers.</li><li>CI/CD pipelines, runtime policies.</li></ul>
-      </div></div>
-
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-ui-checks-grid me-2"></i>Quality & Testing</h3>
-        <ul class="mb-0"><li>Unit/contract/API/UI tests; coverage gates in CI.</li><li>Performance, accessibility, smoke suites.</li></ul>
-      </div></div>
-
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-shield-check me-2"></i>Security & Compliance</h3>
-        <ul class="mb-0"><li>Threat modeling, SDLC controls, SSO/MFA.</li><li>Secrets & dependency scanning, guardrails.</li></ul>
-      </div></div>
-
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-rocket-takeoff me-2"></i>Release & Operate</h3>
-        <ul class="mb-0"><li>Feature flags, progressive rollout, rollback plans.</li><li>SLOs/alerts, runbooks, incident readiness.</li></ul>
-      </div></div>
-
-      <div class="col d-flex"><div class="card-pane h-100 w-100">
-        <h3 class="h5 mb-2"><i class="bi bi-journal-richtext me-2"></i>Documentation & Handover</h3>
-        <ul class="mb-0"><li>ADRs, API contracts, diagrams, admin guides.</li><li>Onboarding playbooks & training.</li></ul>
-      </div></div>
-
-      <!-- Website tile that navigates to your site-launch page -->
-      <div class="col d-flex"><a class="card-pane h-100 w-100 text-decoration-none d-block"
-         href="website-launch.html" title="Website & Digital Launch">
-        <h3 class="h5 mb-2"><i class="bi bi-globe2 me-2"></i>Website & Digital Launch</h3>
-        <p class="mb-0 text-light">Domain/DNS, hosting, pages, SEO, email/workspace — go live cleanly.</p>
-      </a></div>
-
+    <!-- Plan & Discovery -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcPlan"
+                aria-expanded="false" aria-controls="sdlcPlan">
+          <span><i class="bi bi-flag me-2"></i>Plan & Discovery</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcPlan" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>Stakeholder goals, KPIs, scope, and roadmap.</li>
+            <li>Backlog shaping, estimates, milestones.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </section>
+
+    <!-- Design & UX -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcDesign"
+                aria-expanded="false" aria-controls="sdlcDesign">
+          <span><i class="bi bi-easel2 me-2"></i>Design & UX</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcDesign" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>Wireframes, design system, accessibility checks.</li>
+            <li>Prototypes & quick usability feedback.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Build -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcBuild"
+                aria-expanded="false" aria-controls="sdlcBuild">
+          <span><i class="bi bi-code-slash me-2"></i>Build (Web / Mobile / Services)</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcBuild" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>React/Next.js/Vue; .NET/Node/Python/Java.</li>
+            <li>Code reviews, modular design, secure coding.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- APIs & Integrations -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcApi"
+                aria-expanded="false" aria-controls="sdlcApi">
+          <span><i class="bi bi-braces-asterisk me-2"></i>APIs & Integrations</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcApi" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>REST/GraphQL design, versioning, authN/authZ.</li>
+            <li>SaaS, payments, identity, messaging.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data & Pipelines -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcData"
+                aria-expanded="false" aria-controls="sdlcData">
+          <span><i class="bi bi-diagram-3 me-2"></i>Data & Pipelines</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcData" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>Relational stores, cache, ETL/data jobs.</li>
+            <li>Migrations, data quality, retention & privacy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DevOps & Cloud -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcDevops"
+                aria-expanded="false" aria-controls="sdlcDevops">
+          <span><i class="bi bi-cloud-check me-2"></i>DevOps & Cloud</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcDevops" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>IaC (Terraform), environments, secrets, containers.</li>
+            <li>CI/CD pipelines, runtime policies.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quality & Testing -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcQuality"
+                aria-expanded="false" aria-controls="sdlcQuality">
+          <span><i class="bi bi-ui-checks-grid me-2"></i>Quality & Testing</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcQuality" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>Unit/contract/API/UI tests; coverage gates in CI.</li>
+            <li>Performance, accessibility, smoke suites.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security & Compliance -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcSec"
+                aria-expanded="false" aria-controls="sdlcSec">
+          <span><i class="bi bi-shield-check me-2"></i>Security & Compliance</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcSec" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>Threat modeling, SDLC controls, SSO/MFA.</li>
+            <li>Secrets & dependency scanning, guardrails.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Release & Operate -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcOps"
+                aria-expanded="false" aria-controls="sdlcOps">
+          <span><i class="bi bi-rocket-takeoff me-2"></i>Release & Operate</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcOps" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>Feature flags, progressive rollout, rollback plans.</li>
+            <li>SLOs/alerts, runbooks, incident readiness.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documentation & Handover -->
+    <div class="col d-flex">
+      <div class="card-pane h-100 w-100">
+        <button class="tile-toggle w-100 text-start" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sdlcDocs"
+                aria-expanded="false" aria-controls="sdlcDocs">
+          <span><i class="bi bi-journal-richtext me-2"></i>Documentation & Handover</span>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="sdlcDocs" class="tile-body collapse">
+          <ul class="mb-0 small">
+            <li>ADRs, API contracts, diagrams, admin guides.</li>
+            <li>Onboarding playbooks & training.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Website & Digital Launch (navigates, not a collapse) -->
+    <div class="col d-flex">
+      <a class="card-pane h-100 w-100 text-decoration-none d-block"
+         href="website-launch.html" title="Website & Digital Launch">
+        <div class="tile-toggle w-100 text-start">
+          <span><i class="bi bi-globe2 me-2"></i>Website & Digital Launch</span>
+          <i class="bi bi-arrow-right"></i>
+        </div>
+        <p class="mb-0 small text-light mt-2 border-top pt-2">
+          Domain/DNS, hosting, pages, SEO, email/workspace — go live cleanly.
+        </p>
+      </a>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- How we work + What you get -->
   <section class="section">
