@@ -295,3 +295,75 @@ main.container{ margin-block: 3rem; }
 /* Rotate chevron when open */
 .tile-toggle .chevron{ transition: transform .2s ease; }
 .tile-toggle[aria-expanded="true"] .chevron{ transform: rotate(180deg); }
+
+/* keep the whole tile tidy 
+.card-pane.p-0 { overflow: hidden; }
+
+/* header button */
+.tile-toggle{
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  width: 100%;
+  border-radius: .9rem;
+  transition: background .15s ease, color .15s ease;
+}
+.tile-toggle:hover{ background: rgba(255,255,255,.04); }
+
+/* remove the bright blue default focus ring, add a subtle brand ring */
+.tile-toggle:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand-2) 55%, transparent);
+}
+
+/* active/open state — highlight title + icon and give a gentle background */
+.tile-toggle[aria-expanded="true"]{
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+}
+.tile-toggle[aria-expanded="true"] .fw-semibold,
+.tile-toggle[aria-expanded="true"] i{
+  color: var(--brand-2);
+}
+
+/* chevron rotation you already have */
+.tile-toggle .chevron{ transition: transform .2s ease; }
+.tile-toggle[aria-expanded="true"] .chevron{ transform: rotate(180deg); }
+
+/* divider for the body when open */
+.card-pane .collapse{ border-top: 1px solid var(--line); } 
+
+/* keep the whole tile tidy */
+.card-pane.p-0 { overflow: hidden; }
+
+/* header button */
+.tile-toggle{
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  width: 100%;
+  border-radius: .9rem;
+  transition: background .15s ease, color .15s ease;
+}
+.tile-toggle:hover{ background: rgba(255,255,255,.04); }
+
+/* remove the bright blue default focus ring, add a subtle brand ring */
+.tile-toggle:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand-2) 55%, transparent);
+}
+
+/* active/open state — highlight title + icon and give a gentle background */
+.tile-toggle[aria-expanded="true"]{
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+}
+.tile-toggle[aria-expanded="true"] .fw-semibold,
+.tile-toggle[aria-expanded="true"] i{
+  color: var(--brand-2);
+}
+
+/* chevron rotation you already have */
+.tile-toggle .chevron{ transition: transform .2s ease; }
+.tile-toggle[aria-expanded="true"] .chevron{ transform: rotate(180deg); }
+
+/* divider for the body when open */
+.card-pane .collapse{ border-top: 1px solid var(--line); }
