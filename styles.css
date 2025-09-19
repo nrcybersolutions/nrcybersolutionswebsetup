@@ -405,3 +405,36 @@ button.tile-toggle[aria-expanded="true"] .bi-chevron-down{
   transition: transform .2s ease;
 }
 button.tile-toggle .bi-chevron-down{ transition: transform .2s ease; }
+
+/* ---- Collapsible tile headers: active/expanded state ---- */
+.tile-toggle{
+  display:flex; align-items:center; justify-content:space-between;
+  width:100%; padding:1rem 1.25rem;
+  background: transparent;
+  color:#e9f2ff; font-weight:600;
+  border:1px solid var(--line);
+  border-radius:.9rem;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+/* Turn header "blue" when expanded */
+.tile-toggle[aria-expanded="true"]{
+  background: color-mix(in srgb, var(--brand-2) 14%, transparent);
+  border-color: color-mix(in srgb, var(--brand-2) 55%, var(--line));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--brand-2) 40%, transparent),
+              0 .6rem 1.4rem rgba(0,0,0,.35);
+}
+
+/* Chevron rotation */
+.tile-toggle .bi-chevron-down{ transition: transform .2s ease; opacity:.85; }
+.tile-toggle[aria-expanded="true"] .bi-chevron-down{ transform: rotate(180deg); }
+
+/* Optional: tidy body that appears under the header */
+.tile-body{
+  padding: .9rem 1.25rem 1.2rem;
+  border:1px solid var(--line);
+  border-top:0;
+  border-radius: 0 0 .9rem .9rem;
+  margin-top: -.6rem;   /* visually connects to header */
+}
+
